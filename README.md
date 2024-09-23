@@ -49,9 +49,8 @@ def main():
 
   if grades:
         average = calculate_average(grades)
-
-        # Convert average to letter grade
-  if average >= 9.5:
+       # Convert average to letter grade
+        if average >= 9.5:
             letter = 'A'
         elif average >= 8.5:
             letter = 'B'
@@ -63,12 +62,11 @@ def main():
             letter = 'E'
         else:
             letter = 'F'
-
-  print("\n--- Grade Summary ---")
+        print("\n--- Grade Summary ---")
         print(f"Grades entered: {[['A', 'B', 'C', 'D', 'E', 'F'][int(g) - 6] for g in grades]}")
         print(f"Average Grade (Numeric): {average:.2f}")
         print(f"Letter Grade: {letter}")
-    else:
+else:
         print("No grades entered.")
 
 if __name__ == "__main__":
